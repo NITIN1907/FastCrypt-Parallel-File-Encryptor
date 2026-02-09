@@ -1,9 +1,12 @@
 # 🔐 Parallel File Encryptor (Java)
 
-A high-performance **parallel file encryption & decryption system** built in Java.  
-This application recursively encrypts or decrypts all files in a directory using **multi-threading**, **custom file headers**, and **strict safety rules**.
+A **system-level parallel file encryption and decryption engine** implemented in Java, focusing on **concurrency control, safe file I/O, and deterministic execution**.
 
-The project is inspired by **system-level programming concepts** (RAII, ownership transfer, producer–consumer model) and is designed to be **interview-ready**.
+The application traverses directories recursively and models each file as an independent unit of work, processed concurrently using a **CPU-core–based `ExecutorService`**. Task flow is regulated through a **bounded producer–consumer queue** coordinated with semaphores to enforce backpressure and prevent unbounded resource usage.
+
+Each file is guarded by a **custom binary header** to track encryption state, enabling strict validation that blocks double encryption and invalid decryption. File transformation is performed using **chunked `RandomAccessFile` I/O**, with explicit ownership transfer and cleanup to ensure correct resource management.
+
+The design emphasizes **correctness, thread safety, and I/O integrity**, making it suitable for disk-bound, system-oriented Java workloads.
 
 ---
 
