@@ -42,35 +42,37 @@ The design emphasizes **correctness, thread safety, and I/O integrity**, making 
 ---
 
 ## 📂 Project Structure
+## 📂 Project Structure
+
+```text
 project_os/
 ├── .idea/
 ├── src/
-│ ├── main/
-│ │ ├── java/
-│ │ │ └── org/
-│ │ │ └── app/
-│ │ │ ├── encryptDecrypt/
-│ │ │ │ ├── Cryption.java
-│ │ │ │ ├── CryptionMain.java
-│ │ │ │ └── FileHeader.java
-│ │ │ ├── handler/
-│ │ │ │ ├── IO.java
-│ │ │ │ └── ReadEnv.java
-│ │ │ ├── processmanagement/
-│ │ │ │ ├── ProcessManager.java
-│ │ │ │ └── Task.java
-│ │ │ └── Main.java
-│ │ └── resources/
-│ └── test/
-│ └── java/
+│   ├── main/
+│   │   ├── java/
+│   │   │   └── org/
+│   │   │       └── app/
+│   │   │           ├── encryptDecrypt/
+│   │   │           │   ├── Cryption.java
+│   │   │           │   ├── CryptionMain.java
+│   │   │           │   └── FileHeader.java
+│   │   │           ├── handler/
+│   │   │           │   ├── IO.java
+│   │   │           │   └── ReadEnv.java
+│   │   │           ├── processmanagement/
+│   │   │           │   ├── ProcessManager.java
+│   │   │           │   └── Task.java
+│   │   │           └── Main.java
+│   │   └── resources/
+│   └── test/
+│       └── java/
 ├── target/
 ├── tests/
 ├── .env
 ├── .gitignore
 ├── makeDirs.py
 └── pom.xml
-
-
+```
 
 ## 📊 Performance Benchmark (Actual Run)
 
